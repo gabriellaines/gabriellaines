@@ -19,11 +19,14 @@ async function GithubRequest(url) {
 async function getRandomFollower(user) {
   const followers = await GithubRequest(`users/${user}/followers`);
 
-  const randomFollowerIndex = Math.floor(Math.random() * followers.length);
-  const selectedFollowerName = followers[randomFollowerIndex].login;
-  const selectedFollower = await GithubRequest(`users/${selectedFollowerName}`);
+  if (followers.length) {
+    const randomFollowerIndex = Math.floor(Math.random() * followers.length);
+    const selectedFollowerName = followers[randomFollowerIndex].login;
+    const selectedFollower = await GithubRequest(`users/${selectedFollowerName}`);
+    return selectedFollower;
+  }
 
-  return selectedFollower;
+  return Promise.resolve({});
 }
 
 async function getRepositories(user) {
