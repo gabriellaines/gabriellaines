@@ -5,7 +5,7 @@ I decided to create this since it is really easy taking mine as a base, and you'
 ## Just follow those steps
 
 - **Fork my repository**
-  - Instead of just creating a repository from scratch, you need to use mine as a template. You can enter [this link](https://github.com/Nick-Gabe/Nick-Gabe/fork) to generate it. Put your Github username as the repository name, this way it will be displayed at your profile.
+  - Instead of just creating a repository from scratch, you need to use mine as a template. You can enter [this link](https://github.com/gabriellaines/gabriellaines/fork) to generate it. Put your Github username as the repository name, this way it will be displayed at your profile.
 - **Edit the code**
   - To make your life easier, the code I wrote using Javascript is already done, and you just need to set the data that will be used. It is located at [data.js](/data.js). Just modify the file, push and your automatic README will be generated.
 - **Authenticating**

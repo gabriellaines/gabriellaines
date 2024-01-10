@@ -4,8 +4,8 @@
 const { colors } = require('./theme');
 
 module.exports = {
-  user: 'nick-gabe',
-  startedProgramming: '9/10/2020',
+  user: 'gabriellaines',
+  startedProgramming: '10/11/2017',
   repoQuantity: 6,
   header: {
     styles: {
@@ -15,7 +15,7 @@ module.exports = {
       logoColor: colors.lightSecondary.over,
     },
     image: {
-      src: 'src/resources/images/nickgabe.png',
+      src: 'src/resources/images/gabriellaines.png',
       width: 600,
     },
     description: "👋 Heyyy! I'm Nícolas Gabriel, a brazilian programmer.",
@@ -23,17 +23,17 @@ module.exports = {
       {
         type: 'badge',
         name: 'twitter',
-        href: 'https://twitter.com/imnickgabe',
+        href: 'https://twitter.com/imgabriellaines',
       },
       {
         type: 'badge',
         name: 'linkedin',
-        href: 'https://linkedin.com/in/nickgabe',
+        href: 'https://linkedin.com/in/gabriellaines',
       },
       {
         type: 'badge',
         name: 'website',
-        href: 'https://nickgabe.vercel.app',
+        href: 'https://gabriellaines.vercel.app',
         logo: 'esri',
       },
       {
@@ -114,11 +114,11 @@ module.exports = {
     links: [
       {
         name: 'twitter',
-        href: 'https://twitter.com/imnickgabe',
+        href: 'https://twitter.com/imgabriellaines',
       },
       {
         name: 'linkedin',
-        href: 'https://linkedin.com/in/nickgabe',
+        href: 'https://linkedin.com/in/gabriellaines',
       },
       {
         name: 'email',
@@ -127,14 +127,14 @@ module.exports = {
       },
       {
         name: 'npm',
-        href: 'https://www.npmjs.com/~nick-gabe',
+        href: 'https://www.npmjs.com/~gabriellaines',
       },
       {
         name: 'codepen',
-        href: 'https://codepen.io/nick-gabe',
+        href: 'https://codepen.io/gabriellaines',
       },
       {
-        name: 'imnickgabe',
+        name: 'imgabriellaines',
         logo: 'discord',
         labelColor: colors.secondary.base,
       },

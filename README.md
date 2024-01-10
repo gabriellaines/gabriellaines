@@ -1,8 +1,8 @@
-<p align="center"><img src="src/resources/images/nickgabe.png" width="600"/></p>
-<p align="center"><a href="https://twitter.com/imnickgabe"><img src="https://img.shields.io/badge/twitter-4D4577?style=for-the-badge&logoColor=F2F2F2&logo=twitter"/></a>
-<a href="https://linkedin.com/in/nickgabe"><img src="https://img.shields.io/badge/linkedin-4D4577?style=for-the-badge&logoColor=F2F2F2&logo=linkedin"/></a>
-<a href="https://nickgabe.vercel.app"><img src="https://img.shields.io/badge/website-4D4577?logo=esri&style=for-the-badge&logoColor=F2F2F2"/></a>
-<img src="https://komarev.com/ghpvc/?username=nick-gabe&style=for-the-badge&color=4D4577&logoColor=F2F2F2&logo=undefined"/></p>
+<p align="center"><img src="src/resources/images/gabriellaines.png" width="600"/></p>
+<p align="center"><a href="https://twitter.com/imgabriellaines"><img src="https://img.shields.io/badge/twitter-4D4577?style=for-the-badge&logoColor=F2F2F2&logo=twitter"/></a>
+<a href="https://linkedin.com/in/gabriellaines"><img src="https://img.shields.io/badge/linkedin-4D4577?style=for-the-badge&logoColor=F2F2F2&logo=linkedin"/></a>
+<a href="https://gabriellaines.vercel.app"><img src="https://img.shields.io/badge/website-4D4577?logo=esri&style=for-the-badge&logoColor=F2F2F2"/></a>
+<img src="https://komarev.com/ghpvc/?username=gabriellaines&style=for-the-badge&color=4D4577&logoColor=F2F2F2&logo=undefined"/></p>
 <p align="center">👋 Heyyy! I'm Nícolas Gabriel, a brazilian programmer.</p>
 
 ## **About me:**
@@ -57,23 +57,23 @@
 
 ## **Recent projects:**
 
-<a href="https://github.com/Nick-Gabe/central-nickgabe"><img src="https://github-readme-stats.vercel.app/api/pin/?username=nick-gabe&repo=central-nickgabe&title_color=F73C7B&text_color=F2F2F2&bg_color=393359&border_color=121111&icon_color=F2F2F2&border_radius=20" height="100"/></a>
-<a href="https://github.com/Nick-Gabe/better-format"><img src="https://github-readme-stats.vercel.app/api/pin/?username=nick-gabe&repo=better-format&title_color=F73C7B&text_color=F2F2F2&bg_color=393359&border_color=121111&icon_color=F2F2F2&border_radius=20" height="100"/></a>
-<a href="https://github.com/Nick-Gabe/FAPI-whack-a-potatoe"><img src="https://github-readme-stats.vercel.app/api/pin/?username=nick-gabe&repo=FAPI-whack-a-potatoe&title_color=F73C7B&text_color=F2F2F2&bg_color=393359&border_color=121111&icon_color=F2F2F2&border_radius=20" height="100"/></a>
-<a href="https://github.com/Nick-Gabe/elkjs"><img src="https://github-readme-stats.vercel.app/api/pin/?username=nick-gabe&repo=elkjs&title_color=F73C7B&text_color=F2F2F2&bg_color=393359&border_color=121111&icon_color=F2F2F2&border_radius=20" height="100"/></a>
-<a href="https://github.com/Nick-Gabe/dagre"><img src="https://github-readme-stats.vercel.app/api/pin/?username=nick-gabe&repo=dagre&title_color=F73C7B&text_color=F2F2F2&bg_color=393359&border_color=121111&icon_color=F2F2F2&border_radius=20" height="100"/></a>
-<a href="https://github.com/Nick-Gabe/Discord-bad-apple"><img src="https://github-readme-stats.vercel.app/api/pin/?username=nick-gabe&repo=Discord-bad-apple&title_color=F73C7B&text_color=F2F2F2&bg_color=393359&border_color=121111&icon_color=F2F2F2&border_radius=20" height="100"/></a>
+<a href="https://github.com/gabriellaines/central-gabriellaines"><img src="https://github-readme-stats.vercel.app/api/pin/?username=gabriellaines&repo=central-gabriellaines&title_color=F73C7B&text_color=F2F2F2&bg_color=393359&border_color=121111&icon_color=F2F2F2&border_radius=20" height="100"/></a>
+<a href="https://github.com/gabriellaines/better-format"><img src="https://github-readme-stats.vercel.app/api/pin/?username=gabriellaines&repo=better-format&title_color=F73C7B&text_color=F2F2F2&bg_color=393359&border_color=121111&icon_color=F2F2F2&border_radius=20" height="100"/></a>
+<a href="https://github.com/gabriellaines/FAPI-whack-a-potatoe"><img src="https://github-readme-stats.vercel.app/api/pin/?username=gabriellaines&repo=FAPI-whack-a-potatoe&title_color=F73C7B&text_color=F2F2F2&bg_color=393359&border_color=121111&icon_color=F2F2F2&border_radius=20" height="100"/></a>
+<a href="https://github.com/gabriellaines/elkjs"><img src="https://github-readme-stats.vercel.app/api/pin/?username=gabriellaines&repo=elkjs&title_color=F73C7B&text_color=F2F2F2&bg_color=393359&border_color=121111&icon_color=F2F2F2&border_radius=20" height="100"/></a>
+<a href="https://github.com/gabriellaines/dagre"><img src="https://github-readme-stats.vercel.app/api/pin/?username=gabriellaines&repo=dagre&title_color=F73C7B&text_color=F2F2F2&bg_color=393359&border_color=121111&icon_color=F2F2F2&border_radius=20" height="100"/></a>
+<a href="https://github.com/gabriellaines/Discord-bad-apple"><img src="https://github-readme-stats.vercel.app/api/pin/?username=gabriellaines&repo=Discord-bad-apple&title_color=F73C7B&text_color=F2F2F2&bg_color=393359&border_color=121111&icon_color=F2F2F2&border_radius=20" height="100"/></a>
 
 ## **You can find me on:**
 
 *Click to be redirected*
 
-<p align="left"><a href="https://twitter.com/imnickgabe"><img src="https://img.shields.io/badge/twitter-4D4577?style=for-the-badge&logoColor=F2F2F2&logo=twitter"/></a>
-<a href="https://linkedin.com/in/nickgabe"><img src="https://img.shields.io/badge/linkedin-4D4577?style=for-the-badge&logoColor=F2F2F2&logo=linkedin"/></a>
+<p align="left"><a href="https://twitter.com/imgabriellaines"><img src="https://img.shields.io/badge/twitter-4D4577?style=for-the-badge&logoColor=F2F2F2&logo=twitter"/></a>
+<a href="https://linkedin.com/in/gabriellaines"><img src="https://img.shields.io/badge/linkedin-4D4577?style=for-the-badge&logoColor=F2F2F2&logo=linkedin"/></a>
 <a href="mailto:nicolasgabrielctt@gmail.com"><img src="https://img.shields.io/badge/email-4D4577?logo=gmail&style=for-the-badge&logoColor=F2F2F2"/></a>
-<a href="https://www.npmjs.com/~nick-gabe"><img src="https://img.shields.io/badge/npm-4D4577?style=for-the-badge&logoColor=F2F2F2&logo=npm"/></a>
-<a href="https://codepen.io/nick-gabe"><img src="https://img.shields.io/badge/codepen-4D4577?style=for-the-badge&logoColor=F2F2F2&logo=codepen"/></a>
-<img src="https://img.shields.io/badge/imnickgabe-4D4577?logo=discord&labelColor=393359&style=for-the-badge&logoColor=F2F2F2"/></p>
+<a href="https://www.npmjs.com/~gabriellaines"><img src="https://img.shields.io/badge/npm-4D4577?style=for-the-badge&logoColor=F2F2F2&logo=npm"/></a>
+<a href="https://codepen.io/gabriellaines"><img src="https://img.shields.io/badge/codepen-4D4577?style=for-the-badge&logoColor=F2F2F2&logo=codepen"/></a>
+<img src="https://img.shields.io/badge/imgabriellaines-4D4577?logo=discord&labelColor=393359&style=for-the-badge&logoColor=F2F2F2"/></p>
 
 ## **Follower of the day**
 
@@ -83,4 +83,4 @@
 
 <hr>
 
-<p align="center"><img src="https://github-readme-stats.vercel.app/api/?username=nick-gabe&style=for-the-badge&title_color=F73C7B&text_color=F2F2F2&bg_color=393359&border_color=121111&show_icons=true&icon_color=F2F2F2&rank_icon=github"/></p>
+<p align="center"><img src="https://github-readme-stats.vercel.app/api/?username=gabriellaines&style=for-the-badge&title_color=F73C7B&text_color=F2F2F2&bg_color=393359&border_color=121111&show_icons=true&icon_color=F2F2F2&rank_icon=github"/></p>

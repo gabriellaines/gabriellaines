@@ -8,8 +8,8 @@
     "node": "20.x"
   },
   "main": "src/index.js",
-  "author": "Nick-Gabe",
-  "homepage": "https://github.com/Nick-Gabe/Nick-Gabe#readme",
+  "author": "gabriellaines",
+  "homepage": "https://github.com/gabriellaines/gabriellaines#readme",
   "dependencies": {
     "css-color-converter": "^2.0.0",
     "date-stringifier": "^1.1.4",
