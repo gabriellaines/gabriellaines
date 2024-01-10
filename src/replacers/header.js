@@ -10,7 +10,7 @@ module.exports = function (data) {
     views: (badgeProperties) => generateViewsBadge({ username: data.user, ...badgeProperties }),
   };
 
-  const headerImage = generateElement('img', { ...header.image });
+  // const headerImage = generateElement('img', { ...header.image });
 
   const headerBadgesHTML = header.badges
     .map(({ type, ...badgeProperties }) =>
@@ -22,7 +22,7 @@ module.exports = function (data) {
     )
     .join('\n');
 
-  const sections = [headerImage, headerBadgesHTML, header.description];
+  const sections = [headerBadgesHTML, header.description];
 
   return sections.map((section) => generateElement('p', { children: section, align })).join('\n');
 };
