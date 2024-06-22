@@ -36,7 +36,7 @@ module.exports = {
     ],
   },
   aboutme: {
-    list: ['* Gabriel Laines, 26 years', '* Full Stack programmer'],
+    list: ['* Gabriel Laines, 27 years', '* Full Stack programmer'],
   },
   skillswall: {
     styles: {
