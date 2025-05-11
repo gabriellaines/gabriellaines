@@ -7,30 +7,32 @@
 
 * Gabriel Laines, 27 years
 * Full Stack programmer
-* 6 Years, 6 Months and 13 Days since I started programming
+* 7 Years, 5 Months and 2 Days since I started programming
 
 ## **Skills wall:**
 
-<p align="left"><img src="https://img.shields.io/badge/node.js-F73C7B?logo=node.js&style=for-the-badge&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/bootstrap-4D4577?logo=bootstrap&style=for-the-badge&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/sass-F73C7B?logo=sass&style=for-the-badge&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/css3-393359?logo=css3&style=for-the-badge&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/jira-F73C7B?logo=jira&style=for-the-badge&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/jest-393359?logo=jest&style=for-the-badge&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/docker-393359?logo=docker&style=for-the-badge&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/typescript-F73C7B?logo=typescript&style=for-the-badge&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/github-393359?logo=github&style=for-the-badge&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/angular-F73C7B?logo=angular&style=for-the-badge&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/express.js-F73C7B?logo=express&style=for-the-badge&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/npm-393359?logo=npm&style=for-the-badge&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/git-F73C7B?logo=git&style=for-the-badge&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/html5-4D4577?logo=html5&style=for-the-badge&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/visual%20studio%20code-F73C7B?logo=visual%20studio%20code&style=for-the-badge&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/postgres-4D4577?logo=postgres&style=for-the-badge&logoColor=F2F2F2"/>
-<img src="https://img.shields.io/badge/javascript-F73C7B?logo=javascript&style=for-the-badge&logoColor=F2F2F2"/></p>
+<p align="left"><img src="https://img.shields.io/badge/393359?logo=&style=for-the-badge&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/F73C7B?logo=angular&style=for-the-badge&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/F73C7B?logo=&style=for-the-badge&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/4D4577?logo=&style=for-the-badge&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/4D4577?logo=&style=for-the-badge&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/4D4577?logo=&style=for-the-badge&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/F73C7B?logo=&style=for-the-badge&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/393359?logo=&style=for-the-badge&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/4D4577?logo=&style=for-the-badge&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/4D4577?logo=&style=for-the-badge&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/F73C7B?logo=express&style=for-the-badge&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/F73C7B?logo=&style=for-the-badge&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/F73C7B?logo=&style=for-the-badge&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/F73C7B?logo=&style=for-the-badge&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/F73C7B?logo=&style=for-the-badge&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/F73C7B?logo=&style=for-the-badge&logoColor=F2F2F2"/>
+<img src="https://img.shields.io/badge/4D4577?logo=&style=for-the-badge&logoColor=F2F2F2"/></p>
 
 ## **Recent projects:**
 
+<a href="https://github.com/gabriellaines/fullstack-assesment"><img src="https://github-readme-stats.vercel.app/api/pin/?username=gabriellaines&repo=fullstack-assesment&title_color=F73C7B&text_color=F2F2F2&bg_color=393359&border_color=121111&icon_color=F2F2F2&border_radius=20" height="100"/></a>
+<a href="https://github.com/gabriellaines/PDFSpacedRepetition"><img src="https://github-readme-stats.vercel.app/api/pin/?username=gabriellaines&repo=PDFSpacedRepetition&title_color=F73C7B&text_color=F2F2F2&bg_color=393359&border_color=121111&icon_color=F2F2F2&border_radius=20" height="100"/></a>
 <a href="https://github.com/gabriellaines/gabriellaines"><img src="https://github-readme-stats.vercel.app/api/pin/?username=gabriellaines&repo=gabriellaines&title_color=F73C7B&text_color=F2F2F2&bg_color=393359&border_color=121111&icon_color=F2F2F2&border_radius=20" height="100"/></a>
 <a href="https://github.com/gabriellaines/streamdeck-plugin-smartthings"><img src="https://github-readme-stats.vercel.app/api/pin/?username=gabriellaines&repo=streamdeck-plugin-smartthings&title_color=F73C7B&text_color=F2F2F2&bg_color=393359&border_color=121111&icon_color=F2F2F2&border_radius=20" height="100"/></a>
 <a href="https://github.com/gabriellaines/01-fundamentos-node"><img src="https://github-readme-stats.vercel.app/api/pin/?username=gabriellaines&repo=01-fundamentos-node&title_color=F73C7B&text_color=F2F2F2&bg_color=393359&border_color=121111&icon_color=F2F2F2&border_radius=20" height="100"/></a>

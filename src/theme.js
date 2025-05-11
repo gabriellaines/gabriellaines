@@ -1,4 +1,4 @@
-const { getColorBrightness } = require("./utils/getColorBrightness");
+const { getColorBrightness } = require('./utils/getColorBrightness');
 
 const black = '#121111';
 const white = '#F2F2F2';
@@ -9,7 +9,7 @@ function generateBaseAndOverColor(color) {
   return {
     base: color,
     over: getColorBrightness(color) <= brightnessThreshold ? white : black,
-  }
+  };
 }
 
 module.exports = {
