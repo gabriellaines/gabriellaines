@@ -1,0 +1,112 @@
+name: Update Profile Cards
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - README.md
+      - .github/workflows/update-profile-cards.yml
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate GitHub stats card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&show_icons=true&bg_color=161616&border_color=393939&title_color=78a9ff&text_color=c6c6c6&icon_color=be95ff&border_radius=8
+          path: profile/stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate top languages card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&layout=compact&bg_color=161616&border_color=393939&title_color=78a9ff&text_color=c6c6c6&border_radius=8&langs_count=8
+          path: profile/top-langs.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate pin card for comic-reader-client
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=${{ github.repository_owner }}&repo=comic-reader-client&bg_color=161616&border_color=393939&title_color=78a9ff&text_color=c6c6c6&icon_color=be95ff&border_radius=8
+          path: profile/pin-comic-reader-client.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate pin card for comic-reader-server
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=${{ github.repository_owner }}&repo=comic-reader-server&bg_color=161616&border_color=393939&title_color=78a9ff&text_color=c6c6c6&icon_color=be95ff&border_radius=8
+          path: profile/pin-comic-reader-server.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate pin card for PDFSpacedRepetition
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=${{ github.repository_owner }}&repo=PDFSpacedRepetition&bg_color=161616&border_color=393939&title_color=78a9ff&text_color=c6c6c6&icon_color=be95ff&border_radius=8
+          path: profile/pin-pdf-spaced-repetition.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate pin card for streamdeck-plugin-smartthings
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=${{ github.repository_owner }}&repo=streamdeck-plugin-smartthings&bg_color=161616&border_color=393939&title_color=78a9ff&text_color=c6c6c6&icon_color=be95ff&border_radius=8
+          path: profile/pin-streamdeck-plugin-smartthings.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate pin card for jornada-milhas
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=${{ github.repository_owner }}&repo=jornada-milhas&bg_color=161616&border_color=393939&title_color=78a9ff&text_color=c6c6c6&icon_color=be95ff&border_radius=8
+          path: profile/pin-jornada-milhas.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Snapshot streak and activity graph cards
+        env:
+          STREAK_URL: https://streak-stats.demolab.com/?user=${{ github.repository_owner }}&background=161616&border=393939&ring=78a9ff&fire=ff7eb6&currStreakLabel=be95ff&sideLabels=c6c6c6&dates=c6c6c6&currStreakNum=f4f4f4&sideNums=f4f4f4&border_radius=8
+          ACTIVITY_URL: https://github-readme-activity-graph.vercel.app/graph?username=${{ github.repository_owner }}&bg_color=161616&color=78a9ff&line=be95ff&point=ff7eb6&area=true&area_color=78a9ff&border_radius=8&hide_border=false
+        run: |
+          set -euo pipefail
+          mkdir -p profile
+
+          fetch_svg() {
+            local url="$1"
+            local output="$2"
+            local tmp
+            tmp="$(mktemp)"
+
+            curl --fail --silent --show-error --location \
+              --retry 3 --retry-delay 2 \
+              -H "User-Agent: github-actions" \
+              "$url" > "$tmp"
+
+            grep -q "<svg" "$tmp"
+            mv "$tmp" "$output"
+          }
+
+          fetch_svg "$STREAK_URL" profile/streak.svg
+          fetch_svg "$ACTIVITY_URL" profile/activity-graph.svg
+
+      - name: Commit generated cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/*.svg
+          git commit -m "Update profile cards" || exit 0
+          git push

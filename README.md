@@ -74,22 +74,22 @@ My background spans **financial systems** and **biotech research platforms** —
 
 ## Projects
 
-<a href="https://github.com/gabriellaines/comic-reader-client"><img src="https://github-readme-stats.vercel.app/api/pin/?username=gabriellaines&repo=comic-reader-client&bg_color=161616&border_color=393939&title_color=78a9ff&text_color=c6c6c6&icon_color=be95ff&border_radius=8" height="115"/></a>
-<a href="https://github.com/gabriellaines/comic-reader-server"><img src="https://github-readme-stats.vercel.app/api/pin/?username=gabriellaines&repo=comic-reader-server&bg_color=161616&border_color=393939&title_color=78a9ff&text_color=c6c6c6&icon_color=be95ff&border_radius=8" height="115"/></a>
-<a href="https://github.com/gabriellaines/PDFSpacedRepetition"><img src="https://github-readme-stats.vercel.app/api/pin/?username=gabriellaines&repo=PDFSpacedRepetition&bg_color=161616&border_color=393939&title_color=78a9ff&text_color=c6c6c6&icon_color=be95ff&border_radius=8" height="115"/></a>
-<a href="https://github.com/gabriellaines/streamdeck-plugin-smartthings"><img src="https://github-readme-stats.vercel.app/api/pin/?username=gabriellaines&repo=streamdeck-plugin-smartthings&bg_color=161616&border_color=393939&title_color=78a9ff&text_color=c6c6c6&icon_color=be95ff&border_radius=8" height="115"/></a>
-<a href="https://github.com/gabriellaines/jornada-milhas"><img src="https://github-readme-stats.vercel.app/api/pin/?username=gabriellaines&repo=jornada-milhas&bg_color=161616&border_color=393939&title_color=78a9ff&text_color=c6c6c6&icon_color=be95ff&border_radius=8" height="115"/></a>
+<a href="https://github.com/gabriellaines/comic-reader-client"><img src="./profile/pin-comic-reader-client.svg" height="115"/></a>
+<a href="https://github.com/gabriellaines/comic-reader-server"><img src="./profile/pin-comic-reader-server.svg" height="115"/></a>
+<a href="https://github.com/gabriellaines/PDFSpacedRepetition"><img src="./profile/pin-pdf-spaced-repetition.svg" height="115"/></a>
+<a href="https://github.com/gabriellaines/streamdeck-plugin-smartthings"><img src="./profile/pin-streamdeck-plugin-smartthings.svg" height="115"/></a>
+<a href="https://github.com/gabriellaines/jornada-milhas"><img src="./profile/pin-jornada-milhas.svg" height="115"/></a>
 
 ---
 
 <div align="center">
 
-[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=gabriellaines&show_icons=true&bg_color=161616&border_color=393939&title_color=78a9ff&text_color=c6c6c6&icon_color=be95ff&border_radius=8)](https://github.com/gabriellaines)
-[![GitHub Streak](https://streak-stats.demolab.com/?user=gabriellaines&background=161616&border=393939&ring=78a9ff&fire=ff7eb6&currStreakLabel=be95ff&sideLabels=c6c6c6&dates=c6c6c6&currStreakNum=f4f4f4&sideNums=f4f4f4&border_radius=8)](https://github.com/gabriellaines)
+[![GitHub Stats](./profile/stats.svg)](https://github.com/gabriellaines)
+[![GitHub Streak](./profile/streak.svg)](https://github.com/gabriellaines)
 
-[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=gabriellaines&layout=compact&bg_color=161616&border_color=393939&title_color=78a9ff&text_color=c6c6c6&border_radius=8&langs_count=8)](https://github.com/gabriellaines)
+[![Top Languages](./profile/top-langs.svg)](https://github.com/gabriellaines)
 
-[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=gabriellaines&bg_color=161616&color=78a9ff&line=be95ff&point=ff7eb6&area=true&area_color=78a9ff&border_radius=8&hide_border=false)](https://github.com/gabriellaines)
+[![Activity Graph](./profile/activity-graph.svg)](https://github.com/gabriellaines)
 
 </div>
 
