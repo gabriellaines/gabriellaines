@@ -22,13 +22,13 @@
       <svg viewBox="0 0 16 16" width="16" height="16" y="-12" fill="#be95ff">
         <path d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43-.75a4 4 0 00-7.86 0H1.75a.75.75 0 100 1.5h2.32a4 4 0 007.86 0h2.32a.75.75 0 100-1.5h-2.32z"/></svg>
       <text x="25" y="0" class="label">Total Commits (last year):</text>
-      <text x="300" y="0" class="value">474</text>
+      <text x="300" y="0" class="value">485</text>
     </g>
 <g transform="translate(25, 110)">
       <svg viewBox="0 0 16 16" width="16" height="16" y="-12" fill="#be95ff">
         <path d="M7.177 3.073L9.573.677A.25.25 0 0110 .854v4.792a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25z"/></svg>
       <text x="25" y="0" class="label">Total PRs:</text>
-      <text x="300" y="0" class="value">11</text>
+      <text x="300" y="0" class="value">12</text>
     </g>
 <g transform="translate(25, 135)">
       <svg viewBox="0 0 16 16" width="16" height="16" y="-12" fill="#be95ff">
@@ -47,7 +47,7 @@
     <circle r="40" fill="none" stroke="#78a9ff" stroke-width="6"
             stroke-linecap="round" opacity="0.9"
             stroke-dasharray="251.33"
-            stroke-dashoffset="232.00"
+            stroke-dashoffset="225.38"
             transform="rotate(-90)"/>
     <text text-anchor="middle" dominant-baseline="central" class="big">B+</text>
   </g>
