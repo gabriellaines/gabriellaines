@@ -15,6 +15,11 @@ jobs:
   update:
     runs-on: ubuntu-latest
 
+    env:
+      GENERATOR_REPO: https://github.com/Ashutosh00710/github-readme-activity-graph.git
+      # Pinned so the daily run never executes unreviewed upstream code.
+      GENERATOR_SHA: 0962e9461de815933d462e8b98c7ce566cada8fb
+
     permissions:
       contents: write
 
@@ -77,31 +82,122 @@ jobs:
           path: profile/pin-jornada-milhas.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Snapshot streak and activity graph cards
+      - name: Snapshot streak card
         env:
           STREAK_URL: https://streak-stats.demolab.com/?user=${{ github.repository_owner }}&background=161616&border=393939&ring=78a9ff&fire=ff7eb6&currStreakLabel=be95ff&sideLabels=c6c6c6&dates=c6c6c6&currStreakNum=f4f4f4&sideNums=f4f4f4&border_radius=8
-          ACTIVITY_URL: https://github-readme-activity-graph.vercel.app/graph?username=${{ github.repository_owner }}&bg_color=161616&color=78a9ff&line=be95ff&point=ff7eb6&area=true&area_color=78a9ff&border_radius=8&hide_border=false
         run: |
-          set -euo pipefail
+          set -uo pipefail
+          output=profile/streak.svg
           mkdir -p profile
 
-          fetch_svg() {
-            local url="$1"
-            local output="$2"
-            local tmp
-            tmp="$(mktemp)"
-
-            curl --fail --silent --show-error --location \
-              --retry 3 --retry-delay 2 \
-              -H "User-Agent: github-actions" \
-              "$url" > "$tmp"
-
-            grep -q "<svg" "$tmp"
-            mv "$tmp" "$output"
+          # This card comes from a free third-party service that goes offline
+          # from time to time. A failed refresh keeps the committed SVG instead
+          # of failing the run, so the other cards still update.
+          keep_committed_copy() {
+            if [ -f "$output" ]; then
+              echo "::warning::$1 Keeping the committed copy of $output."
+              exit 0
+            fi
+            echo "::error::$1 There is no committed copy of $output to fall back to."
+            exit 1
           }
 
-          fetch_svg "$STREAK_URL" profile/streak.svg
-          fetch_svg "$ACTIVITY_URL" profile/activity-graph.svg
+          tmp="$(mktemp)"
+          curl --fail --silent --show-error --location \
+            --retry 3 --retry-delay 2 \
+            -H "User-Agent: github-actions" \
+            "$STREAK_URL" > "$tmp" \
+            || keep_committed_copy "Could not reach the streak service."
+
+          grep -q "<svg" "$tmp" || keep_committed_copy "The streak service did not return an SVG."
+
+          mv "$tmp" "$output"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Cache activity graph generator dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: activity-graph-npm-${{ env.GENERATOR_SHA }}
+
+      - name: Render activity graph card
+        env:
+          # The public github-readme-activity-graph instance was taken offline
+          # (HTTP 402, DEPLOYMENT_DISABLED), so the graph is rendered here
+          # instead of being fetched from someone else's deployment.
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACTIVITY_QUERY: username=${{ github.repository_owner }}&bg_color=161616&color=78a9ff&line=be95ff&point=ff7eb6&area=true&area_color=78a9ff&border_radius=8&hide_border=false
+          PORT: "5199"
+        run: |
+          set -uo pipefail
+          output="$GITHUB_WORKSPACE/profile/activity-graph.svg"
+          mkdir -p "$(dirname "$output")"
+
+          keep_committed_copy() {
+            if [ -f "$output" ]; then
+              echo "::warning::$1 Keeping the committed copy of $output."
+              exit 0
+            fi
+            echo "::error::$1 There is no committed copy of $output to fall back to."
+            exit 1
+          }
+
+          dump_diagnostics() {
+            echo "--- generator log ---"
+            cat "$work/server.log" 2>/dev/null || echo "(no log)"
+          }
+
+          work="$(mktemp -d)"
+          git clone --quiet "$GENERATOR_REPO" "$work/generator" \
+            || keep_committed_copy "Could not clone the activity graph generator."
+          git -C "$work/generator" checkout --quiet "$GENERATOR_SHA" \
+            || keep_committed_copy "Could not check out generator commit $GENERATOR_SHA."
+
+          cd "$work/generator"
+          npm ci --ignore-scripts --no-audit --no-fund --silent \
+            || keep_committed_copy "Could not install the generator's dependencies."
+
+          npx ts-node src/main.ts > "$work/server.log" 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+
+          base="http://127.0.0.1:$PORT"
+          ready=0
+          for _ in $(seq 1 30); do
+            if curl --silent --fail --max-time 2 "$base/" > /dev/null 2>&1; then
+              ready=1
+              break
+            fi
+            kill -0 "$server_pid" 2>/dev/null || break
+            sleep 1
+          done
+
+          if [ "$ready" -ne 1 ]; then
+            dump_diagnostics
+            keep_committed_copy "The activity graph generator did not start."
+          fi
+
+          curl --silent --show-error --fail --max-time 60 \
+            "$base/graph?$ACTIVITY_QUERY" > "$work/graph.svg" \
+            || { dump_diagnostics; keep_committed_copy "The generator did not return a graph."; }
+
+          # /graph answers 200 even when the GitHub API call fails, rendering the
+          # reason into a small error card, so look for real chart output rather
+          # than trusting the status code.
+          if ! grep -q "ct-chart" "$work/graph.svg"; then
+            echo "--- generator returned ---"
+            head -c 400 "$work/graph.svg"
+            echo
+            dump_diagnostics
+            keep_committed_copy "The generator returned an error card instead of a graph."
+          fi
+
+          cp "$work/graph.svg" "$output"
+          echo "Rendered $output ($(wc -c < "$output") bytes)"
 
       - name: Commit generated cards
         run: |
