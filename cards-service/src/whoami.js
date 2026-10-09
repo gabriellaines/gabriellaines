@@ -53,3 +53,40 @@ if (payload.data?.viewer) {
 } else {
   console.log(`repos visible: could not determine (${payload.errors?.[0]?.message ?? 'unknown'})`);
 }
+
+// What the contribution calendar exposes. The streak and activity cards are
+// built from it, so this is the figure that decides whether private activity
+// shows up in them.
+const to = new Date();
+const from = new Date(to.getTime() - 365 * 24 * 3600 * 1000);
+const contribQuery = `
+query($login: String!, $from: DateTime!, $to: DateTime!) {
+  user(login: $login) {
+    contributionsCollection(from: $from, to: $to) {
+      totalCommitContributions
+      restrictedContributionsCount
+      contributionCalendar { totalContributions }
+    }
+  }
+}`;
+
+const cg = await fetch('https://api.github.com/graphql', {
+  method: 'POST',
+  headers: {
+    Authorization: `bearer ${token}`,
+    'Content-Type': 'application/json',
+    'User-Agent': 'profile-cards-service',
+  },
+  body: JSON.stringify({
+    query: contribQuery,
+    variables: { login: user.login, from: from.toISOString(), to: to.toISOString() },
+  }),
+});
+const cgPayload = await cg.json();
+const c = cgPayload.data?.user?.contributionsCollection;
+if (c) {
+  console.log(`last 365d: calendar=${c.contributionCalendar.totalContributions} public commits=${c.totalCommitContributions} private commits=${c.restrictedContributionsCount}`);
+  if (c.restrictedContributionsCount === 0) {
+    console.log('note: this token reports no private contributions');
+  }
+}

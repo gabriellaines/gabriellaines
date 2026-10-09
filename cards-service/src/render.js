@@ -47,10 +47,14 @@ export async function renderAll(config) {
   const contributions = user.contributionsCollection;
   const stars = repos.reduce((sum, r) => sum + r.stargazerCount, 0);
 
+  // restrictedContributionsCount is the tally of commits to private repos. It
+  // names nothing, but it is still a figure derived from private work, so it
+  // only counts when private data was asked for.
   const stats = {
     stars,
     commits:
-      contributions.totalCommitContributions + contributions.restrictedContributionsCount,
+      contributions.totalCommitContributions +
+      (config.includePrivate ? contributions.restrictedContributionsCount : 0),
     prs: user.pullRequests.totalCount,
     issues: user.issues.totalCount,
     contributedTo: user.repositoriesContributedTo.totalCount,
