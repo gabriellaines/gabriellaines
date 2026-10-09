@@ -16,30 +16,30 @@
       <clipPath id="barClip">
         <rect x="0" y="0" width="290" height="8" rx="4"/>
       </clipPath>
-      <g clip-path="url(#barClip)"><rect x="0.00" y="0" width="130.57"
-        height="8" fill="#3572A5"/><rect x="130.57" y="0" width="61.68"
-        height="8" fill="#44a51c"/><rect x="192.25" y="0" width="42.28"
-        height="8" fill="#3178c6"/><rect x="234.53" y="0" width="25.07"
-        height="8" fill="#e34c26"/><rect x="259.61" y="0" width="13.36"
-        height="8" fill="#f1e05a"/><rect x="272.97" y="0" width="10.87"
-        height="8" fill="#c6538c"/><rect x="283.84" y="0" width="5.74"
-        height="8" fill="#89e051"/><rect x="289.57" y="0" width="0.43"
+      <g clip-path="url(#barClip)"><rect x="0.00" y="0" width="130.19"
+        height="8" fill="#3572A5"/><rect x="130.19" y="0" width="61.50"
+        height="8" fill="#44a51c"/><rect x="191.70" y="0" width="42.16"
+        height="8" fill="#3178c6"/><rect x="233.86" y="0" width="25.00"
+        height="8" fill="#e34c26"/><rect x="258.86" y="0" width="14.16"
+        height="8" fill="#f1e05a"/><rect x="273.02" y="0" width="10.84"
+        height="8" fill="#c6538c"/><rect x="283.86" y="0" width="5.72"
+        height="8" fill="#89e051"/><rect x="289.58" y="0" width="0.42"
         height="8" fill="#427819"/></g>
     </g>
     <g transform="translate(25, 90)"><g transform="translate(0, 0)">
       <circle cx="5" cy="-4" r="5" fill="#3572A5"/>
       <text x="16" y="0" class="label">Python</text>
-      <text x="100" y="0" class="small">45.0%</text>
+      <text x="100" y="0" class="small">44.9%</text>
     </g>
 <g transform="translate(150, 0)">
       <circle cx="5" cy="-4" r="5" fill="#44a51c"/>
       <text x="16" y="0" class="label">QML</text>
-      <text x="100" y="0" class="small">21.3%</text>
+      <text x="100" y="0" class="small">21.2%</text>
     </g>
 <g transform="translate(0, 22)">
       <circle cx="5" cy="-4" r="5" fill="#3178c6"/>
       <text x="16" y="0" class="label">TypeScript</text>
-      <text x="100" y="0" class="small">14.6%</text>
+      <text x="100" y="0" class="small">14.5%</text>
     </g>
 <g transform="translate(150, 22)">
       <circle cx="5" cy="-4" r="5" fill="#e34c26"/>
@@ -49,7 +49,7 @@
 <g transform="translate(0, 44)">
       <circle cx="5" cy="-4" r="5" fill="#f1e05a"/>
       <text x="16" y="0" class="label">JavaScript</text>
-      <text x="100" y="0" class="small">4.6%</text>
+      <text x="100" y="0" class="small">4.9%</text>
     </g>
 <g transform="translate(150, 44)">
       <circle cx="5" cy="-4" r="5" fill="#c6538c"/>
