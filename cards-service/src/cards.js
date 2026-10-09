@@ -68,7 +68,10 @@ export function statsCard({ name, stats }) {
 
   const r = 40;
   const circumference = 2 * Math.PI * r;
-  const offset = circumference * (1 - stats.rank.progress);
+  // Keep a visible arc at the bottom of a band, otherwise only the round line
+  // cap shows and the ring reads as a rendering glitch rather than a score.
+  const shown = 0.06 + stats.rank.progress * 0.94;
+  const offset = circumference * (1 - shown);
 
   const ring = `<g transform="translate(400, 105)">
     <circle r="${r}" fill="none" stroke="${theme.blue}" stroke-width="6" opacity="0.2"/>

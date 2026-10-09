@@ -25,6 +25,11 @@ export const config = {
   token: required('GITHUB_TOKEN'),
   login: process.env.GITHUB_LOGIN ?? 'gabriellaines',
 
+  // Count private repositories in the stars and language totals. Names are
+  // never published, only aggregate sizes, but it is still a disclosure
+  // choice, so it is off unless asked for.
+  includePrivate: bool('INCLUDE_PRIVATE', false),
+
   // Repos to render pin cards for, in order.
   pinRepos: list('PIN_REPOS'),
 

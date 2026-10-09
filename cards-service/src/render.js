@@ -35,8 +35,10 @@ function aggregateLanguages(repos) {
 export async function renderAll(config) {
   const { token, login } = config;
 
-  log.info('fetching profile data', { login });
-  const { user, repos } = await fetchCore(token, login);
+  log.info('fetching profile data', { login, includePrivate: config.includePrivate });
+  const { user, repos } = await fetchCore(token, login, {
+    includePrivate: config.includePrivate,
+  });
   const name = user.name || user.login;
 
   const days = await fetchFullCalendar(token, login, user.createdAt);

@@ -9,6 +9,7 @@ services:
       GITHUB_LOGIN: ${GITHUB_LOGIN:-gabriellaines}
       REPO_SLUG: ${REPO_SLUG:-gabriellaines/gabriellaines}
       PIN_REPOS: ${PIN_REPOS:-}
+      INCLUDE_PRIVATE: ${INCLUDE_PRIVATE:-false}
       RENDER_INTERVAL_HOURS: ${RENDER_INTERVAL_HOURS:-6}
       PUBLISH: ${PUBLISH:-true}
       RATE_LIMIT_PER_MINUTE: ${RATE_LIMIT_PER_MINUTE:-60}

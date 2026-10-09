@@ -34,9 +34,15 @@ async function graphql(token, query, variables) {
   return payload.data;
 }
 
-const CORE_QUERY = `
-query core($login: String!, $after: String) {
-  user(login: $login) {
+// The same selection, read either through user(login:) or viewer. Via
+// user(login:) a token without full `repo` scope sees public repositories only,
+// so stars and language sizes cover just those; viewer sees every owned repo.
+// Which one to use is a privacy decision, so it is configuration, not a default.
+// viewer takes no argument, and GraphQL rejects a declared-but-unused variable,
+// so $login is only declared on the branch that reads it.
+const coreQuery = (includePrivate) => `
+query core(${includePrivate ? '' : '$login: String!, '}$after: String) {
+  ${includePrivate ? 'user: viewer' : 'user(login: $login)'} {
     name
     login
     createdAt
@@ -67,14 +73,15 @@ query core($login: String!, $after: String) {
 }`;
 
 /** Profile totals plus every owned, non-fork repo with its language sizes. */
-export async function fetchCore(token, login) {
+export async function fetchCore(token, login, { includePrivate = false } = {}) {
   let after = null;
   let user = null;
   const repos = [];
+  const query = coreQuery(includePrivate);
 
   // repositories() caps at 100 per page, so walk the cursor.
   for (let page = 0; page < 20; page += 1) {
-    const data = await graphql(token, CORE_QUERY, { login, after });
+    const data = await graphql(token, query, includePrivate ? { after } : { login, after });
     if (!data.user) throw new GitHubError(`user "${login}" not found`);
     user ??= data.user;
     repos.push(...data.user.repositories.nodes);
