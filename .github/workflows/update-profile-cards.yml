@@ -158,8 +158,15 @@ jobs:
             || keep_committed_copy "Could not check out generator commit $GENERATOR_SHA."
 
           cd "$work/generator"
-          npm ci --ignore-scripts --no-audit --no-fund --silent \
-            || keep_committed_copy "Could not install the generator's dependencies."
+          echo "node $(node --version), npm $(npm --version)"
+
+          # Not --silent: npm's own diagnosis is the only useful thing to read
+          # when an install fails, and losing it means a blind round trip.
+          if ! npm ci --ignore-scripts --no-audit --no-fund > "$work/npm.log" 2>&1; then
+            echo "--- npm log ---"
+            tail -40 "$work/npm.log"
+            keep_committed_copy "Could not install the generator's dependencies."
+          fi
 
           npx ts-node src/main.ts > "$work/server.log" 2>&1 &
           server_pid=$!
