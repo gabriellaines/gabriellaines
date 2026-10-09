@@ -1,14 +1,14 @@
-![header](https://capsule-render.vercel.app/api?type=waving&color=161616&height=180&section=header&text=Gabriel%20Laines&fontSize=48&fontColor=78a9ff&animation=fadeIn&fontAlignY=38&desc=Senior%20Angular%20Developer%20%7C%20S%C3%A3o%20Paulo%2C%20Brazil&descAlignY=58&descSize=18&descColor=c6c6c6)
+![header](./profile/assets/header.svg)
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3500&pause=1000&color=78A9FF&center=true&vCenter=true&width=520&lines=Angular+%7C+RxJS+%7C+HTML+%7C+CSS;NestJS+%7C+Node.js+%7C+RxJS;8%2B+years+building+web+applications;Open+to+global+%26+remote+roles)](https://git.io/typing-svg)
+[![Typing SVG](./profile/assets/typing-svg.svg)](https://git.io/typing-svg)
 
 <br/>
 
-[![Twitter](https://img.shields.io/badge/twitter-161616?style=for-the-badge&logo=twitter&logoColor=78a9ff)](https://twitter.com/xDdgabrielDx)
-[![LinkedIn](https://img.shields.io/badge/linkedin-161616?style=for-the-badge&logo=linkedin&logoColor=78a9ff)](https://www.linkedin.com/in/gabriel-alves-dev/)
-[![Email](https://img.shields.io/badge/email-161616?style=for-the-badge&logo=gmail&logoColor=78a9ff)](mailto:gabrielantonio20111@hotmail.com)
+[![Twitter](./profile/assets/twitter.svg)](https://twitter.com/xDdgabrielDx)
+[![LinkedIn](./profile/assets/linkedin.svg)](https://www.linkedin.com/in/gabriel-alves-dev/)
+[![Email](./profile/assets/email.svg)](mailto:gabrielantonio20111@hotmail.com)
 ![Profile Views](https://komarev.com/ghpvc/?username=gabriellaines&style=for-the-badge&color=161616&label=PROFILE+VIEWS)
 
 </div>
@@ -32,43 +32,43 @@ My background spans **financial systems** and **biotech research platforms** —
 
 **Frontend**
 
-![Angular](https://img.shields.io/badge/angular-161616?style=for-the-badge&logo=angular&logoColor=78a9ff)
-![TypeScript](https://img.shields.io/badge/typescript-161616?style=for-the-badge&logo=typescript&logoColor=78a9ff)
-![RxJS](https://img.shields.io/badge/rxjs-161616?style=for-the-badge&logo=reactivex&logoColor=be95ff)
-![JavaScript](https://img.shields.io/badge/javascript-161616?style=for-the-badge&logo=javascript&logoColor=ffe97b)
-![HTML5](https://img.shields.io/badge/html5-161616?style=for-the-badge&logo=html5&logoColor=ff7eb6)
-![SASS](https://img.shields.io/badge/sass-161616?style=for-the-badge&logo=sass&logoColor=ff7eb6)
+![Angular](./profile/assets/angular.svg)
+![TypeScript](./profile/assets/typescript.svg)
+![RxJS](./profile/assets/rxjs.svg)
+![JavaScript](./profile/assets/javascript.svg)
+![HTML5](./profile/assets/html5.svg)
+![SASS](./profile/assets/sass.svg)
 
 **Backend**
 
-![Node.js](https://img.shields.io/badge/node.js-161616?style=for-the-badge&logo=node.js&logoColor=42be65)
-![NestJS](https://img.shields.io/badge/nestjs-161616?style=for-the-badge&logo=nestjs&logoColor=ff7eb6)
-![Express](https://img.shields.io/badge/express-161616?style=for-the-badge&logo=express&logoColor=f4f4f4)
-![TypeORM](https://img.shields.io/badge/typeorm-161616?style=for-the-badge&logoColor=f4f4f4)
-![Prisma](https://img.shields.io/badge/prisma-161616?style=for-the-badge&logo=prisma&logoColor=f4f4f4)
-![Kafka](https://img.shields.io/badge/kafka-161616?style=for-the-badge&logo=apachekafka&logoColor=f4f4f4)
+![Node.js](./profile/assets/node-js.svg)
+![NestJS](./profile/assets/nestjs.svg)
+![Express](./profile/assets/express.svg)
+![TypeORM](./profile/assets/typeorm.svg)
+![Prisma](./profile/assets/prisma.svg)
+![Kafka](./profile/assets/kafka.svg)
 
 **Databases**
 
-![PostgreSQL](https://img.shields.io/badge/postgresql-161616?style=for-the-badge&logo=postgresql&logoColor=33b1ff)
-![MongoDB](https://img.shields.io/badge/mongodb-161616?style=for-the-badge&logo=mongodb&logoColor=42be65)
-![Redis](https://img.shields.io/badge/redis-161616?style=for-the-badge&logo=redis&logoColor=ff7eb6)
-![DynamoDB](https://img.shields.io/badge/dynamodb-161616?style=for-the-badge&logo=amazondynamodb&logoColor=33b1ff)
+![PostgreSQL](./profile/assets/postgresql.svg)
+![MongoDB](./profile/assets/mongodb.svg)
+![Redis](./profile/assets/redis.svg)
+![DynamoDB](./profile/assets/dynamodb.svg)
 
 **Cloud & DevOps**
 
-![AWS](https://img.shields.io/badge/aws-161616?style=for-the-badge&logo=amazonaws&logoColor=ffe97b)
-![Docker](https://img.shields.io/badge/docker-161616?style=for-the-badge&logo=docker&logoColor=33b1ff)
-![Docker Compose](https://img.shields.io/badge/docker%20compose-161616?style=for-the-badge&logo=docker&logoColor=33b1ff)
-![Linux](https://img.shields.io/badge/linux-161616?style=for-the-badge&logo=linux&logoColor=ffe97b)
-![Git](https://img.shields.io/badge/git-161616?style=for-the-badge&logo=git&logoColor=ff7eb6)
+![AWS](./profile/assets/aws.svg)
+![Docker](./profile/assets/docker.svg)
+![Docker Compose](./profile/assets/docker-compose.svg)
+![Linux](./profile/assets/linux.svg)
+![Git](./profile/assets/git.svg)
 
 **Testing**
 
-![Jest](https://img.shields.io/badge/jest-161616?style=for-the-badge&logo=jest&logoColor=be95ff)
-![Jasmine](https://img.shields.io/badge/jasmine-161616?style=for-the-badge&logo=jasmine&logoColor=be95ff)
-![Mocha](https://img.shields.io/badge/mocha-161616?style=for-the-badge&logo=mocha&logoColor=be95ff)
-![Chai](https://img.shields.io/badge/chai-161616?style=for-the-badge&logo=chai&logoColor=be95ff)
+![Jest](./profile/assets/jest.svg)
+![Jasmine](./profile/assets/jasmine.svg)
+![Mocha](./profile/assets/mocha.svg)
+![Chai](./profile/assets/chai.svg)
 
 ---
 
@@ -93,4 +93,4 @@ My background spans **financial systems** and **biotech research platforms** —
 
 </div>
 
-![footer](https://capsule-render.vercel.app/api?type=waving&color=161616&height=100&section=footer)
+![footer](./profile/assets/footer.svg)
