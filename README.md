@@ -74,11 +74,10 @@ My background spans **financial systems** and **biotech research platforms** —
 
 ## Projects
 
-<a href="https://github.com/gabriellaines/comic-reader-client"><img src="./profile/pin-comic-reader-client.svg" height="115"/></a>
-<a href="https://github.com/gabriellaines/comic-reader-server"><img src="./profile/pin-comic-reader-server.svg" height="115"/></a>
-<a href="https://github.com/gabriellaines/PDFSpacedRepetition"><img src="./profile/pin-pdf-spaced-repetition.svg" height="115"/></a>
-<a href="https://github.com/gabriellaines/streamdeck-plugin-smartthings"><img src="./profile/pin-streamdeck-plugin-smartthings.svg" height="115"/></a>
 <a href="https://github.com/gabriellaines/jornada-milhas"><img src="./profile/pin-jornada-milhas.svg" height="115"/></a>
+<a href="https://github.com/gabriellaines/rigdeck"><img src="./profile/pin-rigdeck.svg" height="115"/></a>
+<a href="https://github.com/gabriellaines/chargeblast-challenge"><img src="./profile/pin-chargeblast-challenge.svg" height="115"/></a>
+<a href="https://github.com/gabriellaines/termsheet-challenge"><img src="./profile/pin-termsheet-challenge.svg" height="115"/></a>
 
 ---
 

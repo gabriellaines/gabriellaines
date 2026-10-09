@@ -17,7 +17,11 @@ services:
     networks:
       - frontend
     labels:
-      - "traefik.enable=true"
+      # Off until CARDS_DOMAIN has a DNS record pointing at this host: with the
+      # router enabled against a name that does not resolve, Let's Encrypt keeps
+      # failing the HTTP challenge and will eventually rate-limit the account.
+      # Card publishing does not need this; only the live view counter does.
+      - "traefik.enable=${CARDS_EXPOSE:-false}"
       - "traefik.docker.network=frontend"
 
       # Namespaced redirect middleware so this project does not depend on one
