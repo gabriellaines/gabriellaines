@@ -9,7 +9,7 @@
 [![Twitter](./profile/assets/twitter.svg)](https://twitter.com/xDdgabrielDx)
 [![LinkedIn](./profile/assets/linkedin.svg)](https://www.linkedin.com/in/gabriel-alves-dev/)
 [![Email](./profile/assets/email.svg)](mailto:gabrielantonio20111@hotmail.com)
-![Profile Views](https://komarev.com/ghpvc/?username=gabriellaines&style=for-the-badge&color=161616&label=PROFILE+VIEWS)
+![Profile Views](https://cards.gabriellaines.dev/counter.svg)
 
 </div>
 
