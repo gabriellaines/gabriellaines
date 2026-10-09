@@ -1,0 +1,15 @@
+{
+  "name": "profile-cards-service",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Renders the profile README's data cards and publishes them into the repo.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "render": "node src/index.js --once --no-publish",
+    "publish-once": "node src/index.js --once"
+  }
+}

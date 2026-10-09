@@ -1,0 +1,53 @@
+services:
+  cards:
+    build: .
+    image: profile-cards:latest
+    container_name: profile-cards
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      GITHUB_LOGIN: ${GITHUB_LOGIN:-gabriellaines}
+      REPO_SLUG: ${REPO_SLUG:-gabriellaines/gabriellaines}
+      PIN_REPOS: ${PIN_REPOS:-}
+      RENDER_INTERVAL_HOURS: ${RENDER_INTERVAL_HOURS:-6}
+      PUBLISH: ${PUBLISH:-true}
+      RATE_LIMIT_PER_MINUTE: ${RATE_LIMIT_PER_MINUTE:-60}
+    volumes:
+      - cards-data:/data
+    networks:
+      - frontend
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=frontend"
+
+      # Namespaced redirect middleware so this project does not depend on one
+      # declared by another compose project.
+      - "traefik.http.middlewares.cards-https-redirect.redirectscheme.scheme=https"
+
+      - "traefik.http.routers.cards.rule=Host(`${CARDS_DOMAIN}`)"
+      - "traefik.http.routers.cards.entrypoints=websecure"
+      - "traefik.http.routers.cards.tls.certresolver=le"
+      - "traefik.http.routers.cards.middlewares=cards-ratelimit"
+
+      - "traefik.http.routers.cards-http.rule=Host(`${CARDS_DOMAIN}`)"
+      - "traefik.http.routers.cards-http.entrypoints=web"
+      - "traefik.http.routers.cards-http.middlewares=cards-https-redirect"
+
+      # A second limiter at the edge, so abuse is shed before it reaches Node.
+      - "traefik.http.middlewares.cards-ratelimit.ratelimit.average=30"
+      - "traefik.http.middlewares.cards-ratelimit.ratelimit.burst=60"
+
+      - "traefik.http.services.cards.loadbalancer.server.port=8080"
+
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+volumes:
+  cards-data:
+
+networks:
+  frontend:
+    external: true
