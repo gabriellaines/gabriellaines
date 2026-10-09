@@ -160,11 +160,18 @@ jobs:
           cd "$work/generator"
           echo "node $(node --version), npm $(npm --version)"
 
+          # `npm ci` cannot be used: the generator's committed lockfile is out
+          # of sync with its package.json at the pinned commit (it omits the
+          # optional @unrs/resolver platform binaries), which npm 11 rejects
+          # where npm 10 did not. Only the runtime dependencies are needed to
+          # render, and they all sit in "dependencies", so --omit=dev skips the
+          # eslint tree the missing entries belong to.
+          #
           # Not --silent: npm's own diagnosis is the only useful thing to read
           # when an install fails, and losing it means a blind round trip.
-          if ! npm ci --ignore-scripts --no-audit --no-fund > "$work/npm.log" 2>&1; then
+          if ! npm install --omit=dev --ignore-scripts --no-audit --no-fund > "$work/npm.log" 2>&1; then
             echo "--- npm log ---"
-            tail -40 "$work/npm.log"
+            head -40 "$work/npm.log"
             keep_committed_copy "Could not install the generator's dependencies."
           fi
 
