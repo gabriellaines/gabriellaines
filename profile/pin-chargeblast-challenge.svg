@@ -1,7 +1,7 @@
 <svg width="400" height="120" viewBox="0 0 400 120"
      fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
-     aria-label="jornada-milhas">
-  <title>jornada-milhas</title>
+     aria-label="chargeblast-challenge">
+  <title>chargeblast-challenge</title>
   <style>
     .title { font: 600 18px 'Segoe UI', Ubuntu, sans-serif; fill: #78a9ff; }
     .label { font: 600 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #c6c6c6; }
@@ -11,7 +11,7 @@
   </style>
   <rect x="0.5" y="0.5" width="399" height="119"
         rx="8" fill="#161616" stroke="#393939"/>
-  <text x="25" y="35" class="title">jornada-milhas</text>
+  <text x="25" y="35" class="title">chargeblast-challenge</text>
   <text x="25" y="62" class="label">No description</text>
     <g transform="translate(25, 95)"><circle cx="6" cy="-4" r="6" fill="#3178c6"/>
        <text x="18" y="0" class="small">TypeScript</text></g>
