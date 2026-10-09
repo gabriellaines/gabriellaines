@@ -24,10 +24,10 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Generate GitHub stats card
-        uses: readme-tools/github-readme-stats-action@v1
+        uses: readme-tools/github-readme-stats-action@v2
         with:
           card: stats
           options: username=${{ github.repository_owner }}&show_icons=true&bg_color=161616&border_color=393939&title_color=78a9ff&text_color=c6c6c6&icon_color=be95ff&border_radius=8
@@ -35,7 +35,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate top languages card
-        uses: readme-tools/github-readme-stats-action@v1
+        uses: readme-tools/github-readme-stats-action@v2
         with:
           card: top-langs
           options: username=${{ github.repository_owner }}&layout=compact&bg_color=161616&border_color=393939&title_color=78a9ff&text_color=c6c6c6&border_radius=8&langs_count=8
@@ -43,7 +43,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate pin card for comic-reader-client
-        uses: readme-tools/github-readme-stats-action@v1
+        uses: readme-tools/github-readme-stats-action@v2
         with:
           card: pin
           options: username=${{ github.repository_owner }}&repo=comic-reader-client&bg_color=161616&border_color=393939&title_color=78a9ff&text_color=c6c6c6&icon_color=be95ff&border_radius=8
@@ -51,7 +51,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate pin card for comic-reader-server
-        uses: readme-tools/github-readme-stats-action@v1
+        uses: readme-tools/github-readme-stats-action@v2
         with:
           card: pin
           options: username=${{ github.repository_owner }}&repo=comic-reader-server&bg_color=161616&border_color=393939&title_color=78a9ff&text_color=c6c6c6&icon_color=be95ff&border_radius=8
@@ -59,7 +59,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate pin card for PDFSpacedRepetition
-        uses: readme-tools/github-readme-stats-action@v1
+        uses: readme-tools/github-readme-stats-action@v2
         with:
           card: pin
           options: username=${{ github.repository_owner }}&repo=PDFSpacedRepetition&bg_color=161616&border_color=393939&title_color=78a9ff&text_color=c6c6c6&icon_color=be95ff&border_radius=8
@@ -67,7 +67,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate pin card for streamdeck-plugin-smartthings
-        uses: readme-tools/github-readme-stats-action@v1
+        uses: readme-tools/github-readme-stats-action@v2
         with:
           card: pin
           options: username=${{ github.repository_owner }}&repo=streamdeck-plugin-smartthings&bg_color=161616&border_color=393939&title_color=78a9ff&text_color=c6c6c6&icon_color=be95ff&border_radius=8
@@ -75,7 +75,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate pin card for jornada-milhas
-        uses: readme-tools/github-readme-stats-action@v1
+        uses: readme-tools/github-readme-stats-action@v2
         with:
           card: pin
           options: username=${{ github.repository_owner }}&repo=jornada-milhas&bg_color=161616&border_color=393939&title_color=78a9ff&text_color=c6c6c6&icon_color=be95ff&border_radius=8
@@ -114,12 +114,12 @@ jobs:
           mv "$tmp" "$output"
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
-          node-version: "20"
+          node-version: "24"
 
       - name: Cache activity graph generator dependencies
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: ~/.npm
           key: activity-graph-npm-${{ env.GENERATOR_SHA }}
